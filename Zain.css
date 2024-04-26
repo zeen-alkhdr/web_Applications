@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #068;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.container {
+    width: 100px;
+    height: 100px;
+    background-color: #efefef;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+div.container div.zoom-1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(20 , 50 , 140 , 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.zoom-1 div.zoom-1-2 {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(20 , 50 , 150 ,0.6);
+    border-radius: 100%;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    position: relative;
+}
+
+div.container div.zoom-1-2::before,
+div.container div.zoom-1-2::after {
+    content: "";
+    width: 0;
+}
+
+
+div.zoom-1-2 div.zoom-1-2-3 {
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    background-color: rgba(20 , 65 , 135 , 0.6);
+    border-radius: 50%;
+}
+div.zoom-1-2 div.style {
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    background-color:  rgba(240,240,240,0.1);
+    top: -23px;
+    border-radius: 50%;
+    backface-visibility: hidden;
+}
+
+
+div.container div.flash {
+    padding: 2.5px;
+    background-color: rgba(20,50,120,0.7);
+    border-radius: 50%;
+    position: absolute;
+    top: 16.88px;
+    left: 16px;
+}
+
+
+
